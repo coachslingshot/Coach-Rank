@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-white text-foreground font-sans;
+  }
+}
+
+@layer components {
+  /* Football field pattern */
+  .field-pattern {
+    background-image: 
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 70px,
+        rgba(255, 255, 255, 0.05) 70px,
+        rgba(255, 255, 255, 0.05) 72px
+      );
+  }
+
+  /* Grade badge styles */
+  .grade-badge {
+    @apply inline-flex items-center justify-center w-12 h-12 rounded-full font-headline text-2xl font-bold;
+  }
+
+  .grade-a {
+    @apply bg-grade-a text-white;
+  }
+
+  .grade-b {
+    @apply bg-grade-b text-white;
+  }
+
+  .grade-c {
+    @apply bg-grade-c text-white;
+  }
+
+  .grade-d {
+    @apply bg-grade-d text-white;
+  }
+
+  .grade-f {
+    @apply bg-grade-f text-white;
+  }
+
+  /* Card hover effects */
+  .coach-card {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer;
+  }
+
+  /* Premium blur effect */
+  .premium-blur {
+    @apply relative overflow-hidden;
+  }
+
+  .premium-blur::after {
+    content: '';
+    @apply absolute inset-0 backdrop-blur-md bg-black/20;
+  }
+
+  /* Loading skeleton */
+  .skeleton {
+    @apply animate-pulse bg-gray-300 rounded;
+  }
+
+  /* Stadium lights effect */
+  .stadium-lights {
+    background: 
+      radial-gradient(ellipse at top, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom, rgba(26, 95, 58, 0.1) 0%, transparent 50%);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+  }
+
+  .glow-green {
+    box-shadow: 0 0 20px rgba(26, 95, 58, 0.5);
+  }
+}
