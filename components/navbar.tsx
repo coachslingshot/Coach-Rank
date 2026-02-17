@@ -12,7 +12,6 @@ export function Navbar() {
         { href: '/', label: 'Rankings', icon: Trophy },
         { href: '/coaches', label: 'All Coaches', icon: Users },
         { href: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
-        { href: '/survey', label: 'Rate Coach', icon: FileText },
     ];
 
     return (
@@ -62,3 +61,4 @@ export function Navbar() {
         </nav>
     );
 }
+
